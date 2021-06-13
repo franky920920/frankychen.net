@@ -55,6 +55,17 @@ document.getElementById('contactForm')
         }
 
         let request = new XMLHttpRequest();
+        //Loading
+        Swal.fire({
+            title: 'Loading...',
+            html: 'Please wait...',
+            allowEscapeKey: false,
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        });
+        //Fire AJAX request
         request.open('POST', 'https://api.frankychen.net/send', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify(data));
@@ -64,22 +75,21 @@ document.getElementById('contactForm')
                     swal.fire({
                         icon: 'success',
                         title: '成功!',
-                        message: '訊息已發送，我將會盡快與您取得聯繫！'
+                        text: '訊息已發送，我將會盡快與您取得聯繫！'
                     })
                 }
             } else {
                 swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    message: '發生未預期的錯誤！',
-                    footer: '請發送截圖至' +
+                    text: '發生未預期的錯誤！',
+                    footer: '<p>請發送截圖至' +
                         '<a href="mailto:franky920920+sys_error@gmail.com">' +
                         'franky920920+sys_error@gmail.com' +
                         '</a>' +
                         '<br>' +
-                        'Error code: HTTP ' + request.status
+                        'Error code: HTTP ' + request.status + '</p>'
                 })
-
             }
         }
     })
