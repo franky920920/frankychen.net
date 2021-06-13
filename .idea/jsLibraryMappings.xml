@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/js/contact.js" libraries="{sweetalert2}" />
+    <file url="file://$PROJECT_DIR$/js/scripts.js" libraries="{bootstrap}" />
+    <file url="PROJECT" libraries="{SimpleLightbox}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

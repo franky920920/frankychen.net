@@ -1,0 +1,17 @@
+#about {
+	.about-icon {
+		height: 60px;
+
+		img, i {
+			max-height: 40px;
+		}
+
+		img {
+			filter: invert(46%) sepia(12%) saturate(5179%) hue-rotate(335deg) brightness(102%) contrast(91%);
+		}
+	}
+
+	ul {
+		list-style: none;
+	}
+}
