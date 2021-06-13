@@ -44,13 +44,13 @@ document.getElementById('contactForm')
         let data = {
             message: 'CONTACT FORM DATA' +
                 Date.now() +
-                '<br>Name: ' +
+                '\nName: ' +
                 document.getElementById('name').value +
-                '<br>Email: ' +
+                '\nEmail: ' +
                 document.getElementById('email').value +
-                '<br>Phone: ' +
+                '\nPhone: ' +
                 document.getElementById('phone').value +
-                '<br>Message' +
+                '\nMessage' +
                 document.getElementById('message').value
         }
 
