@@ -19,7 +19,11 @@
 				{
 					"key": "x-frame-options",
 					"value": "SAMEORIGIN"
-				}
+				},
+				{
+					"key": "cache-control",
+          			"value": "public, max-age=1800, stale-while-revalidate=18000"
+          		}
 			]
 		}
 	]
