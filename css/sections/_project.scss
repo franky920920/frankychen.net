@@ -1,7 +1,15 @@
 #project {
+	* {
+		font-family: "Amazon Ember", sans-serif, "Font Awesome 5 Brands", "Font Awesome 5 Free";
+	}
+
 	.card {
 		border-radius: 10px;
 		height: 100%;
+
+		.card-title {
+			margin-bottom: 1em;
+		}
 	}
 
 	i.fab {
