@@ -1,5 +1,15 @@
 //Javascript for contact form
 
+document.getElementById('contact_mail_btn').addEventListener('click', () => {
+    document.getElementById("contact_mail").classList.remove("d-none");
+    document.getElementById("contact_meet").classList.add("d-none");
+})
+
+document.getElementById('contact_meet_btn').addEventListener('click', () => {
+    document.getElementById("contact_meet").classList.remove("d-none");
+    document.getElementById("contact_mail").classList.add("d-none");
+})
+
 //Submit handler
 document.getElementById('contactForm')
     .addEventListener('submit', (e) => {

@@ -1,0 +1,13 @@
+.calendly-inline-widget {
+	min-width: 85vw;
+	height: 750px;
+
+	@media screen and (min-width: 764px) {
+		margin-top: -66px;
+	}
+}
+
+#contact_mail_btn, #contact_meet_btn {
+	border: 1px solid #f4623a;
+	z-index: 1;
+}
