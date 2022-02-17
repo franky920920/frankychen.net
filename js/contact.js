@@ -51,17 +51,29 @@ document.getElementById('contactForm')
             return false;
         }
 
+        let date = new Date,
+            dformat = [
+                    date.getMonth() + 1,
+                    date.getDate(),
+                    date.getFullYear()
+                ].join('/') +
+                ' ' +
+                [
+                    date.getHours(),
+                    date.getMinutes(),
+                    date.getSeconds()
+                ].join(':');
         let data = {
-            message: 'CONTACT FORM DATA' +
-                Date.now() +
-                '\nName: ' +
-                document.getElementById('name').value +
-                '\nEmail: ' +
-                document.getElementById('email').value +
-                '\nPhone: ' +
-                document.getElementById('phone').value +
-                '\nMessage' +
-                document.getElementById('message').value
+            message:
+                'From: ' + document.getElementById('name').value +
+                '<' + document.getElementById('email').value + '> [' + document.getElementById('phone').value + ']\n' +
+                'Date: ' + date + '\n' +
+                'Subject: ' + document.getElementById('subject').value + '\n' +
+                document.getElementById('message').value,
+            subject: document.getElementById('subject').value,
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+
         }
 
         let request = new XMLHttpRequest();
