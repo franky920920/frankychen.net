@@ -88,7 +88,7 @@ document.getElementById('contactForm')
             }
         });
         //Fire AJAX request
-        request.open('POST', 'https://api.frankychen.net/send', true);
+        request.open('POST', 'https://4wsi5wcxfpipkjmocknzamzeji0ftgqq.lambda-url.us-east-1.on.aws/', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify(data));
         request.onreadystatechange = () => {
